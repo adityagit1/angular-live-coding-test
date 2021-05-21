@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { NgModule } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { MatButtonModule } from '@angular/material/button';
@@ -7,6 +8,7 @@ import { MatDividerModule } from '@angular/material/divider';
 import { MatFormFieldModule } from '@angular/material/form-field';
 import { MatInputModule } from '@angular/material/input';
 import { MatListModule } from '@angular/material/list';
+import { MatPaginatorModule } from '@angular/material/paginator';
 import { MatTableModule } from '@angular/material/table';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
@@ -17,6 +19,7 @@ import { FormValidationComponent } from './form-validation/form-validation.compo
 import { HomeComponent } from './home/home.component';
 import { ProductsComponent } from './products/products.component';
 import { TableComponent } from './table/table.component';
+import { ProductViewComponent } from './product-view/product-view.component';
 
 @NgModule({
   declarations: [
@@ -25,6 +28,7 @@ import { TableComponent } from './table/table.component';
     FormValidationComponent,
     TableComponent,
     ProductsComponent,
+    ProductViewComponent,
   ],
   imports: [
     BrowserModule,
@@ -34,11 +38,13 @@ import { TableComponent } from './table/table.component';
     MatCardModule,
     MatDividerModule,
     MatFormFieldModule,
+    MatListModule,
+    MatDialogModule,
     MatInputModule,
     MatButtonModule,
     MatTableModule,
-    MatListModule,
-    MatDialogModule,
+    HttpClientModule,
+    MatPaginatorModule,
   ],
   providers: [],
   entryComponents: [EmailDiloagComponent],

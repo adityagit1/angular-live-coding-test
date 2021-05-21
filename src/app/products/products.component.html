@@ -2,15 +2,16 @@
   <div class="inner-container">
     <mat-card>
       <mat-selection-list [multiple]="false">
-        <mat-list-option *ngFor="let film of films" [value]="film">
+        <mat-list-option *ngFor="let film of films" [value]="film" (click)="changeProductData(film)">
           {{ film.title }}
         </mat-list-option>
       </mat-selection-list>
     </mat-card>
-    <mat-card>
-      <h2><strong>Film Title:</strong> Awesome Film</h2>
-      <p><strong>Director: </strong> The Director</p>
-      <p><strong>Producer: </strong> Producer1, Producer2</p>
+    <mat-card *ngIf="changeProductValue">
+      <h2><strong>Film Title:</strong> {{changeProductValue.title}}</h2>
+      <p><strong>Director: </strong> {{changeProductValue.director}}</p>
+      <p><strong>Producer: </strong> {{changeProductValue.producer}}</p>
+      <button routerLink="/products/{{changeProductValue.episode_id}}"> View </button>
     </mat-card>
   </div>
 </div>
