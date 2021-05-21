@@ -6,13 +6,11 @@
       <div style="padding: 1rem 0; width: 500px">
         <mat-form-field appearance="outline" style="width: 100%">
           <mat-label>Enter your email</mat-label>
-          <input
-            matInput
-            placeholder="me@ishakantony.com"
-            formControlName="email"
-          />
+          <input matInput placeholder="me@ishakantony.com" formControlName="email" />
+          <mat-error>Email is Not correct </mat-error>
         </mat-form-field>
-        <button mat-raised-button color="accent">Submit</button>
+
+        <button mat-raised-button color="accent" [disabled]="!formGroup.valid">Submit</button>
       </div>
     </form>
   </mat-card>

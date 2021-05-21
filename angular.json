@@ -127,5 +127,8 @@
       }
     }
   },
-  "defaultProject": "angular-live-coding-test"
+  "defaultProject": "angular-live-coding-test",
+  "cli": {
+    "analytics": false
+  }
 }
